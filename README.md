@@ -28,6 +28,10 @@ git clone https://github.com/berkaykush/Netflix-Analysis-Dashboard
 cd Netflix-Analysis-Dashboard
 python app.py
 ```
+<p align="center">
+<video src="https://user-images.githubusercontent.com/70837975/209436805-eba3d1a1-6c79-437b-94ce-b5117ff03b3c.mp4" controls="controls" style="max-width: 730px;">
+</video>
+</p>
 
 ## Author
 Berkay Kush
