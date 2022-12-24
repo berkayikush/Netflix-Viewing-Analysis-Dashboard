@@ -35,7 +35,7 @@ def create_layout(app):
                                 html.Br(),
                                 html.Br(),
                                 "I am aware that I do not have that much data because I have just started using Netflix. ",
-                                "Because of this, I added some fake data to make the graphs look more interesting. ",
+                                "Because of this, I added some example data to make the graphs look more interesting. ",
                                 "However, this code should work for any amount of data. ",
                                 "This will be removed in the future after I have sufficient data. ",
                                 "Additionally, I tried to make the dashboard layout as responsive as possible. ",

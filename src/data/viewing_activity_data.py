@@ -45,7 +45,7 @@ def preprocess_viewing_activity_data(viewing_activity_data):
         columns=["Duration", "Duration in Seconds"]
     )
 
-    # Since currently I do not have much data, I added some fake data to make the graphs look better.
+    # Since currently I do not have much data, I added some example data to make the graphs look more interesting.
     # This will be removed in the future, after I have sufficient data.
     viewing_activity_data = pd.concat(
         [viewing_activity_data, create_example_data()],
