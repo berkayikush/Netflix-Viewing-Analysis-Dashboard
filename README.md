@@ -19,7 +19,7 @@
 
 ## Packages To Install:
 ```
-pip install -r environments/requirements.txt
+pip install -r environment/requirements.txt
 ```
 
 ## Running the Project:
