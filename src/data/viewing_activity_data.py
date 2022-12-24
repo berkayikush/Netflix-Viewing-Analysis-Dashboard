@@ -56,6 +56,7 @@ def preprocess_viewing_activity_data(viewing_activity_data):
 
 
 def preprocess_title_col(title_description):
+    # Remove _hook from the end of the string
     title_description_list = title_description.split("_hook", 1)[0].split(":")
 
     if title_description_list[0].startswith("Season"):
