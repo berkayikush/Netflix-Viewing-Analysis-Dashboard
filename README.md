@@ -1,6 +1,8 @@
 # Netflix-Viewing-Analysis-Dashboard
 ![](https://img.shields.io/badge/Programming_Language-Python-blue.svg)
 ![](https://img.shields.io/badge/Python_Version-3.11.0-brown.svg)
+![](https://img.shields.io/badge/Dash_Version-2.7.0-yellow.svg)
+![](https://img.shields.io/badge/Pandas_Version-1.5.2-purple.svg)
 ![](https://img.shields.io/badge/Status-Complete-green.svg)
 
 <p>
