@@ -4,7 +4,7 @@ import plotly.express as px
 from . import ids
 from ..data.netflix_analysis_data import NetflixAnalysisData
 
-COLOR_SCHEME = ("#7d0000", "#b10000", "#c80000", "#ff0000")
+COLOR_SCHEME = ("#7d0000", "#ca0000", "#ff0909", "#ff3a3a")
 
 
 @callback(
