@@ -5,7 +5,15 @@ from ..data.netflix_analysis_data import NetflixAnalysisData
 
 
 def create_card_group():
-    most_viewed_title = NetflixAnalysisData.TOP_10_MOST_VIEWED_TITLES["Title"].iloc[0]
+    most_viewed_title = (
+        NetflixAnalysisData.TOP_10_MOST_VIEWED_TITLES.groupby("Title")[
+            "Duration in Hours"
+        ]
+        .sum()
+        .sort_values(ascending=False)
+        .index[0]
+    )
+
     avg_num_hours_watched_per_day = (
         NetflixAnalysisData.DAILY_HOURS_WATCHED.groupby("Day")["Duration in Hours"]
         .sum()
