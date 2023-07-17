@@ -1,5 +1,5 @@
 black==22.12.0
-pylint==2.15.8
+flake8==6.0.0
 dash==2.7.0
 dash-bootstrap-components==1.2.1
 pandas==1.5.2
