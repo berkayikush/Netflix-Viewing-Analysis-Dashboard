@@ -20,34 +20,48 @@ def create_layout(app):
                         width=12,
                     ),
                     dbc.Col(
-                        html.H1(
-                            app.title,
-                            className="text-capitilize text-center mb-2 fs-3",
-                        ),
-                        width=12,
-                    ),
-                    dbc.Col(
-                        html.P(
-                            children=[
-                                "This dashboard is a data visualization of my Netflix viewing activity data. ",
-                                "The data is collected from Netflix's viewing activity page. ",
-                                "Then, the data is preprocessed and visualized using Python, Pandas, and Dash. ",
-                                html.Br(),
-                                html.Br(),
-                                "I am aware that I do not have that much data because I have just started using Netflix. ",
-                                "Because of this, I added some example data to make the graphs look more interesting. ",
-                                "However, this code should work for any amount of data. ",
-                                "This will be removed in the future after I have sufficient data. ",
-                                "Additionally, I tried to make the dashboard layout as responsive as possible. ",
-                                "Please do not judge my preferences 😊",
-                            ],
-                            className="mb-4 fs-6 mx-auto text-center",
-                        ),
-                        xs=12,
-                        sm=12,
-                        md=9,
-                        lg=8,
-                        xl=6,
+                        [
+                            html.Div(
+                                children=[
+                                    html.H1(
+                                        app.title,
+                                        className="text-capitalize fs-2 mb-6",
+                                    ),
+                                    html.P(
+                                        children=[
+                                            "This dashboard is a data visualization of my Netflix viewing activity data. ",
+                                            "The data is collected from Netflix's viewing activity page. ",
+                                            "Then, the data is preprocessed and visualized using Python, Pandas, and Dash. ",
+                                            html.Br(),
+                                            html.Br(),
+                                            "I am aware that I do not have that much data because I have just started using Netflix. ",
+                                            "Because of this, I added some example data to make the graphs look more interesting. ",
+                                            "However, this code should work for any amount of data. ",
+                                            "This will be removed in the future after I have sufficient data. ",
+                                            "Additionally, I tried to make the dashboard layout as responsive as possible. ",
+                                            "Please do not judge my preferences 😊",
+                                        ],
+                                        className="fs-6",
+                                        style={
+                                            "width": "0",
+                                            "min-width": "100%",
+                                            "text-align": "justify",
+                                            "text-justify": "inter-word",
+                                        },
+                                    ),
+                                ],
+                                className="mb-2",
+                                style={
+                                    "display": "inline-block",
+                                    "vertical-align": "middle",
+                                    "position": "relative",
+                                    "left": "50%",
+                                    "transform": "translate(-50%, 0)",
+                                },
+                            )
+                        ],
+                        xs=11,
+                        sm=11,
                     ),
                 ],
                 justify="center",
@@ -59,7 +73,7 @@ def create_layout(app):
                         className="text-center",
                     )
                 ],
-                className="mb-4",
+                className="mb-3",
                 justify="center",
             ),
             dbc.Row(
