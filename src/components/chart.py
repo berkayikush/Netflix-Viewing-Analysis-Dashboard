@@ -46,7 +46,7 @@ def render_top_10_most_viewed_titles_fig(
         x="Duration in Hours",
         y="Title",
         color="Year",
-        title="Top 10 Most Watched Titles over Years",
+        title="Top 10 Most Viewed Titles over Years",
         labels={
             "Duration in Hours": "hours watched",
             "Title": "title",
