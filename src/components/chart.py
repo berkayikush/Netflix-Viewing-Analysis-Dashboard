@@ -4,7 +4,7 @@ import plotly.express as px
 from . import ids
 from ..data.netflix_analysis_data import NetflixAnalysisData
 
-COLOR_SCHEME = ("#7d0000", "#ba0000", "#fc0909", "#ff3a3a")
+COLOR_SCHEME = ["#940404", "#c62222", "#e74c3c", "#ff7f7f", "#ffaaaa"]
 
 
 @callback(
@@ -32,8 +32,8 @@ def update_data_chart(filtered_chart, filtered_years):
             mask = NetflixAnalysisData.MONTHLY_HOURS_WATCHED["Year"].isin(
                 filtered_years
             )
-            filered_data = NetflixAnalysisData.MONTHLY_HOURS_WATCHED[mask]
-            fig = render_monthly_hours_watched_fig(filered_data)
+            filtered_data = NetflixAnalysisData.MONTHLY_HOURS_WATCHED[mask]
+            fig = render_monthly_hours_watched_fig(filtered_data)
 
     return fig
 
@@ -119,7 +119,6 @@ def render_monthly_hours_watched_fig(
             "Duration in Hours": "hours watched",
             "Year": "year",
         },
-        category_orders={"Year": sorted(set(data["Year"].tolist()), key=int)},
         template="plotly_dark",
         color_discrete_sequence=COLOR_SCHEME,
     )
