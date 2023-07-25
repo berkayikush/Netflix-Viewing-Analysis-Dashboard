@@ -23,4 +23,4 @@ def init_app():
 
 if __name__ == "__main__":
     app = init_app()
-    app.run_server(debug=True, port=3000)
+    app.run_server(debug=False)
