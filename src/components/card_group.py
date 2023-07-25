@@ -14,10 +14,8 @@ def create_card_group():
         .index[0]
     )
 
-    avg_num_hours_watched_per_day = (
-        NetflixAnalysisData.DAILY_HOURS_WATCHED.groupby("Day")["Duration in Hours"]
-        .sum()
-        .mean()
+    avg_num_hours_watched_per_day = calculate_avg_num_hours_watched_per_day(
+        NetflixAnalysisData.VIEWING_ACTIVITY
     )
 
     avg_num_hours_watched_per_year = (
@@ -43,6 +41,14 @@ def create_card_group():
     )
 
 
+def calculate_avg_num_hours_watched_per_day(viewing_activity_data):
+    daily_watch_duration = viewing_activity_data.groupby(
+        viewing_activity_data["Start Time"].dt.date
+    )["Duration in Hours"].sum()
+
+    return daily_watch_duration.mean()
+
+
 def create_most_viewed_title_card(most_viewed_title):
     return dbc.Card(
         dbc.CardBody(
@@ -65,9 +71,7 @@ def create_avg_num_hours_watched_per_day_card(avg_num_hours_watched_per_day):
         dbc.CardBody(
             [
                 html.H3(children=[html.I(className="bi bi-clock-fill fs-5")]),
-                html.H3(
-                    "The average number of hours watched per day", className="fs-6"
-                ),
+                html.H3("The average daily hours watched", className="fs-6"),
                 html.P(
                     f"{avg_num_hours_watched_per_day:.2f}",
                     className="text-danger",
@@ -84,9 +88,7 @@ def create_avg_num_hours_watched_per_year_card(avg_num_hours_watched_per_year):
         dbc.CardBody(
             [
                 html.H3(children=[html.I(className="bi bi-laptop-fill fs-5")]),
-                html.H3(
-                    "The average number of hours watched per year", className="fs-6"
-                ),
+                html.H3("The average yearly hours watched", className="fs-6"),
                 html.P(
                     f"{avg_num_hours_watched_per_year:.2f}",
                     className="text-danger",
@@ -103,7 +105,7 @@ def create_most_viewed_year_card(most_viewed_year):
         dbc.CardBody(
             [
                 html.H3(children=[html.I(className="bi bi-calendar-fill fs-5")]),
-                html.H3("The most viewed year", className="fs-6"),
+                html.H3("The most active year", className="fs-6"),
                 html.P(
                     f"{most_viewed_year}",
                     className="text-danger",
