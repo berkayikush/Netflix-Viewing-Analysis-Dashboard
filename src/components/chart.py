@@ -23,10 +23,12 @@ def update_data_chart(filtered_chart, filtered_years):
             filtered_data = NetflixAnalysisData.TOP_10_MOST_VIEWED_TITLES[mask]
             fig = render_top_10_most_viewed_titles_fig(filtered_data)
 
-        case "Daily Hours Watched Graph":
-            mask = NetflixAnalysisData.DAILY_HOURS_WATCHED["Year"].isin(filtered_years)
-            filtered_data = NetflixAnalysisData.DAILY_HOURS_WATCHED[mask]
-            fig = render_daily_hours_watched_fig(filtered_data)
+        case "Hours Watched for Each Day of the Week Graph":
+            mask = NetflixAnalysisData.HOURS_WATCHED_PER_DAY["Year"].isin(
+                filtered_years
+            )
+            filtered_data = NetflixAnalysisData.HOURS_WATCHED_PER_DAY[mask]
+            fig = render_hours_watched_per_day_fig(filtered_data)
 
         case "Monthly Hours Watched Graph":
             mask = NetflixAnalysisData.MONTHLY_HOURS_WATCHED["Year"].isin(
@@ -46,7 +48,7 @@ def render_top_10_most_viewed_titles_fig(
         x="Duration in Hours",
         y="Title",
         color="Year",
-        title="Top 10 Most Viewed Titles over Years",
+        title="Top 10 Most Viewed Titles Over the Years",
         labels={
             "Duration in Hours": "hours watched",
             "Title": "title",
@@ -72,15 +74,15 @@ def render_top_10_most_viewed_titles_fig(
     return fig
 
 
-def render_daily_hours_watched_fig(
-    data=NetflixAnalysisData.DAILY_HOURS_WATCHED,
+def render_hours_watched_per_day_fig(
+    data=NetflixAnalysisData.HOURS_WATCHED_PER_DAY,
 ):
     fig = px.bar(
         data,
         x="Duration in Hours",
         y="Day",
         color="Year",
-        title="Daily Hours Watched over Years",
+        title="Hours Watched for Each Day of the Week Over the Years",
         labels={
             "Duration in Hours": "hours watched",
             "Day": "day",
@@ -113,7 +115,7 @@ def render_monthly_hours_watched_fig(
         x="Month",
         y="Duration in Hours",
         color="Year",
-        title="Monthly Hours Watched Over Years",
+        title="Monthly Hours Watched Over the Years",
         labels={
             "Month": "month",
             "Duration in Hours": "hours watched",

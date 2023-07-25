@@ -16,10 +16,11 @@ def render_chart_dropdown():
             },
             {
                 "label": html.Span(
-                    ["Daily Hours Watched Graph"], className="text-primary"
+                    ["Hours Watched for Each Day of the Week Graph"],
+                    className="text-primary",
                 ),
-                "value": "Daily Hours Watched Graph",
-                "search": "Daily Hours Watched Graph",
+                "value": "Hours Watched for Each Day of the Week Graph",
+                "search": "Hours Watched for Each Day of the Week Graph",
             },
             {
                 "label": html.Span(
