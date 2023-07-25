@@ -80,12 +80,12 @@ def render_hours_watched_per_day_fig(
     fig = px.bar(
         data,
         x="Duration in Hours",
-        y="Day",
+        y="Day Name",
         color="Year",
         title="Hours Watched for Each Day of the Week Over the Years",
         labels={
             "Duration in Hours": "hours watched",
-            "Day": "day",
+            "Day Name": "day",
             "Year": "year",
         },
         category_orders={"Year": sorted(set(data["Year"].tolist()), key=int)},
