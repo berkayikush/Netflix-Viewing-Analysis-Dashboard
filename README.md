@@ -6,16 +6,8 @@
 ![Dash_Version-2.7.0](https://img.shields.io/badge/Dash_Version-2.7.0-purple.svg)
 ![Status-Complete](https://img.shields.io/badge/Status-Complete-green.svg)
 
-  This dashboard is a data visualization of my Netflix viewing activity data.
-  The data is collected from Netflix's viewing activity page.
-  Then, the data is preprocessed and visualized using Python, Pandas, and Dash.
-
-  I am aware that I do not have that much data because I have just started using Netflix.
-  Because of this, I added some example data to make the graphs look more interesting.
-  However, this code should work for any amount of data.
-  This will be removed in the future after I have sufficient data.
-  Additionally, I tried to make the dashboard layout as responsive as possible.
-  Please do not judge my preference 😊
+<p style="text-align: justify"> This dashboard presents the visualization of my Netflix viewing activity data, collected from Netflix's viewing activity page. The data undergoes preprocessing and is then visualized using Python, Pandas, Plotly, and Dash. The code is designed to be flexible and capable of handling any amount of data. I've put effort into making the dashboard layout as responsive as possible. Please do not judge my preferences 😊
+</p>
 
 ## Packages To Install
 
