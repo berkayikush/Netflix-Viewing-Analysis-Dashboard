@@ -15,7 +15,13 @@ def create_layout(app):
                     dbc.Col(
                         html.Img(
                             src=app.get_asset_url("netflix_logo.png"),
-                            className="img-fluid rounded mx-auto d-block mw-25 h-auto",
+                            style={
+                                "width": "100%",
+                                "max-width": "285px",
+                                "position": "relative",
+                                "left": "50%",
+                                "transform": "translate(-50%, 0)",
+                            },
                         ),
                         width=12,
                     ),
