@@ -64,7 +64,7 @@ def create_avg_num_hours_watched_per_day_card(avg_num_hours_watched_per_day):
         dbc.CardBody(
             [
                 html.H3(children=[html.I(className="bi bi-clock-fill fs-5")]),
-                html.H3("The average daily hours watched", className="fs-6"),
+                html.H3("Daily hours watched on average", className="fs-6"),
                 html.P(
                     f"{avg_num_hours_watched_per_day:.2f}",
                     className="text-danger",
@@ -81,7 +81,7 @@ def create_avg_num_hours_watched_per_year_card(avg_num_hours_watched_per_year):
         dbc.CardBody(
             [
                 html.H3(children=[html.I(className="bi bi-laptop-fill fs-5")]),
-                html.H3("The average yearly hours watched", className="fs-6"),
+                html.H3("Yearly hours watched on average", className="fs-6"),
                 html.P(
                     f"{avg_num_hours_watched_per_year:.2f}",
                     className="text-danger",
