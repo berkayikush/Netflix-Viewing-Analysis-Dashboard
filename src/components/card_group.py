@@ -47,7 +47,7 @@ def create_most_viewed_title_card(most_viewed_title):
         dbc.CardBody(
             [
                 html.H3(children=[html.I(className="bi bi-heart-fill fs-5")]),
-                html.H3("The most viewed title", className="fs-6"),
+                html.H3("Most viewed title", className="fs-6"),
                 html.P(
                     f"{most_viewed_title}",
                     className="text-danger",
@@ -98,7 +98,7 @@ def create_most_viewed_year_card(most_viewed_year):
         dbc.CardBody(
             [
                 html.H3(children=[html.I(className="bi bi-calendar-fill fs-5")]),
-                html.H3("The most active year", className="fs-6"),
+                html.H3("Most active year", className="fs-6"),
                 html.P(
                     f"{most_viewed_year}",
                     className="text-danger",
