@@ -17,10 +17,8 @@ def update_data_chart(filtered_chart, filtered_years):
 
     match filtered_chart:
         case "Top 10 Most Viewed Titles Graph":
-            mask = NetflixAnalysisData.TOP_10_MOST_VIEWED_TITLES["Year"].isin(
-                filtered_years
-            )
-            filtered_data = NetflixAnalysisData.TOP_10_MOST_VIEWED_TITLES[mask]
+            mask = NetflixAnalysisData.MOST_VIEWED_TITLES["Year"].isin(filtered_years)
+            filtered_data = NetflixAnalysisData.MOST_VIEWED_TITLES[mask].head(10)
             fig = render_top_10_most_viewed_titles_fig(filtered_data)
 
         case "Hours Watched for Each Day of the Week Graph":
@@ -41,7 +39,7 @@ def update_data_chart(filtered_chart, filtered_years):
 
 
 def render_top_10_most_viewed_titles_fig(
-    data=NetflixAnalysisData.TOP_10_MOST_VIEWED_TITLES,
+    data=NetflixAnalysisData.MOST_VIEWED_TITLES.head(10),
 ):
     fig = px.bar(
         data,
