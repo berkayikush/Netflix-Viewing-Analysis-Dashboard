@@ -23,7 +23,7 @@ cd Netflix-Analysis-Dashboard
 python app.py
 ```
 
-<https://user-images.githubusercontent.com/70837975/209436805-eba3d1a1-6c79-437b-94ce-b5117ff03b3c.mp4>
+https://github.com/berkaykush/Netflix-Viewing-Analysis-Dashboard/assets/70837975/7843c82b-0ac5-48f8-b257-dbb91e99679f
 
 ## Author
 
